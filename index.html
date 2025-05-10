@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="./styles/normalize.css">
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
+<head>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/course-home-page.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/picture.jpg" alt="Francisco Javier Zuñiga Sancen" class="profile-img">
+            <div class="header-text">
+                <h1>Francisco Javier Zuñiga Sancen</h1>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">Final</a></li>
+                <li><a href="#">GitHub Profile</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content-container">
+            <div class="card">
+                <h2>Course Work</h2>
+                <ul>
+                    <li>Assignment 1</li>
+                    <li>Assignment 2</li>
+                    <li>Assignment 3</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2>Toloria, Madagascar</h2>
+                <img src="images/tequis.png" alt="Historic Center" class="image-card">
+                <p>Historic Center</p>
+            </div>
+        </section>
+        <section class="filter-section">
+            <div class="filter-buttons">
+                <button class="filter-btn" onclick="filterCourses('all')">All</button>
+                <button class="filter-btn" onclick="filterCourses('CSE')">CSE</button>
+                <button class="filter-btn" onclick="filterCourses('WDD')">WDD</button>
+            </div>
+            <div class="filtered-count">
+                <p>Filtered courses: <span id="filteredCount">0</span></p>
+            </div>
+            <div class="selected-count">
+                <p id="selectedCount">Selected: 0</p>
+            </div>
+            <div class="course-buttons">
+                <button class="course-btn CSE" onclick="selectCourse(this)">CSE 110</button>
+                <button class="course-btn WDD" onclick="selectCourse(this)">WDD 130</button>
+                <button class="course-btn CSE" onclick="selectCourse(this)">CSE 111</button>
+                <button class="course-btn WDD" onclick="selectCourse(this)">WDD 131</button>
+                <button class="course-btn CSE" onclick="selectCourse(this)">CSE 210</button>
+                <button class="course-btn WDD" onclick="selectCourse(this)">WDD 231</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>©<span id="currentyear"> </span>  🌵 Francisco Javier Zuñiga Sancen 🌵 Queretaro <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg" alt="Mexico Flag" class="mexico-flag"> </p>
+        <p>Last modification: <span id="date-and-time"></span></p>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
 </html>
