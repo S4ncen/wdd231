@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #2C3E50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.header-text h1 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: yellow;
+    color: black;
+}
+
+/* Main area */
+main {
+    padding: 20px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #34495e;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.card ul li {
+    padding: 8px 0;
+}
+
+.card:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.card .image-card {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+/* Main area - courses section */
+.filter-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #34495e;
+    color: white;
+    border-radius: 8px;
+}
+
+.filter-buttons {
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.filtered-count {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.course-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.course-btn {
+    background-color: #8e44ad;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    width: 150px;
+    margin: 5px;
+}
+
+.course-btn:hover {
+    background-color: #9b59b6;
+}
+
+.course-btn.selected {
+    background-color: brown;
+    color: white;
+}
+
+/* Footer area */
+.footer {
+    background-color: #2C3E50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 8px;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.mexico-flag {
+    width: 24px;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+#date-and-time {
+    font-size: 1rem;
+    color: yellow;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .header-text h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+/* Main area */
+
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    /* Main area - courses section */
+        .course-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-btn {
+        font-size: 0.9rem;
+    }
+
+    .course-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    /* Footer area */
+    .footer p {
+        font-size: 0.9rem;
+    }
+
+    .mexico-flag {
+        width: 20px;
+    }
+
+    #date-and-time {
+        font-size: 0.8rem;
+    }
+}
