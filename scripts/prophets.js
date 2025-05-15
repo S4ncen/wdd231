@@ -40,13 +40,13 @@ const displayProphets = (prophets) => {
         const birthdate = document.createElement('p');
         birthdate.textContent = `Birthdate: ${prophet.birthdate}`;
 
-        const deathdate = document.createElement('p');
-        deathdate.textContent = `Deathdate: ${prophet.deathdate ? prophet.deathdate : 'Still living'}`;
+        const birthplace = document.createElement("p");
+        birthplace.textContent = `Place of Birth: ${prophet.birthplace}`;
 
         // Append the h2, img, and other details to the card section
         card.appendChild(fullName);
         card.appendChild(birthdate);
-        card.appendChild(deathdate);
+        card.appendChild(birthplace);
         card.appendChild(portrait);
 
 
