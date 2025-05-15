@@ -1,0 +1,38 @@
+{
+    "familyName": "González",
+    "dateMovedToWard": "2023-01-15",
+    "numberOfMembers": 4,
+    "visitedByBishopric": true,
+    "individualMemberData": {
+        "members": [
+            {
+            "name": "Juan González",
+            "age": 35,
+            "relationshipToHead": "Padre",
+            "isBaptized": true,
+            "isActive": true
+            },
+            {
+            "name": "Ana González",
+            "age": 33,
+            "relationshipToHead": "Madre",
+            "isBaptized": true,
+            "isActive": true
+            },
+            {
+            "name": "Emilia González",
+            "age": 10,
+            "relationshipToHead": "Hija",
+            "isBaptized": false,
+            "isActive": false
+            },
+            {
+            "name": "Miguel González",
+            "age": 8,
+            "relationshipToHead": "Hijo",
+            "isBaptized": false,
+            "isActive": false
+            }
+        ]
+    }
+}

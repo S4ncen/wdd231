@@ -1,0 +1,76 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Cards Container */
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual Prophet Cards */
+.prophet-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+.prophet-card h2 {
+    font-size: 1.8em;
+    color: #333;
+}
+
+.prophet-card img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.prophet-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .prophet-card h2 {
+        font-size: 1.5em;
+    }
+
+    .prophet-card p {
+        font-size: 0.9em;
+    }
+}
