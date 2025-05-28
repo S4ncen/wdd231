@@ -21,44 +21,105 @@
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Escudo-Tequisquiapan.png" alt="Tequisquiapan flag" class="profile-img">
-            <div class="header-text">
-                <h1>Tequisquiapan Chamber of Commerce</h1>
+        <div class="site-header-content">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Escudo-Tequisquiapan.png" alt="Tequisquiapan flag" class="header-logo">
+            <div class="site-title-container">
+                <h1>
+                    <span class="tequisquiapan-text">Tequisquiapan</span>
+                    <span class="chamber-text">Chamber of Commerce</span>
+                </h1>
             </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="#directory-listing-section" class="active">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li>
+                        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+                            <i class="fas fa-adjust"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
-                <li><a href="directory.html" class="active">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
-            </ul>
-        </nav>
+        <div class="hero-image-container">
+            <img src="images/hero.png" alt="Hero Image Placeholder" class="hero-image">
+            <div class="hero-text">Tequisquiapan</div>
+            <button class="keynote-tickets-btn">Keynote Tickets</button>
+        </div>
     </header>
     <main>
-        <section class="content-container">
-            <div class="card">
-                <h2>Tequisquiapan, Queretaro</h2>
-                <img src="images/tequis.png" alt="Historic Center" class="image-card">
-                <p>Historic Center</p>
-            </div>
-        </section>
-
-        <section class="business-cards-section">
-            <div class="controls-container">
-                <button id="gridViewBtn" class="view-toggle-btn active"><i class="fas fa-th-large"></i></button>
-                <button id="listViewBtn" class="view-toggle-btn"><i class="fas fa-list"></i></button>
-                <button id="modeToggle" class="mode-toggle-btn">Toggle Dark Mode</button>
-            </div>
-            <div id="businessCardGrid" class="business-card-grid">
+        <div class="main-content-grid">
+            <section class="info-card events-card">
+                <div class="card-header">
+                    <h2>Events</h2>
                 </div>
+                <div class="card-content">
+                    </div>
+            </section>
+
+            <section class="info-card weather-card">
+                <div class="card-header">
+                    <h2>Current Weather</h2>
+                </div>
+                <div class="card-content weather-current">
+                    <div class="weather-icon-temp">
+                        <img id="weather-icon-display" src="" alt="Weather icon">
+                        <p><span id="current-temp-value"></span>&deg;F</p>
+                    </div>
+                    <figcaption id="weather-desc-display"></figcaption>
+                    <p>High: <span id="current-high"></span>&deg;</p>
+                    <p>Low: <span id="current-low"></span>&deg;</p>
+                    <p>Humidity: <span id="current-humidity"></span>%</p>
+                    <p>Sunrise: <span id="current-sunrise"></span></p>
+                    <p>Sunset: <span id="current-sunset"></span></p>
+                </div>
+            </section>
+
+            <section class="info-card forecast-card">
+                <div class="card-header">
+                    <h2>Weather Forecast</h2>
+                </div>
+                <div class="card-content weather-forecast">
+                    <p>Today: <strong id="forecast-today-temp">--&deg;F</strong></p>
+                    <p>Wednesday: <strong id="forecast-wednesday-temp">--&deg;F</strong></p>
+                    <p>Thursday: <strong id="forecast-thursday-temp">--&deg;F</strong></p>
+                </div>
+            </section>
+        </div>
+
+        <section class="directory-listing" id="directory-listing-section">
+            <div class="view-controls">
+                <button id="grid-view-btn" class="view-toggle-btn active" aria-label="Show Grid View"><i class="fas fa-th-large"></i></button>
+                <button id="list-view-btn" class="view-toggle-btn" aria-label="Show List View"><i class="fas fa-list"></i></button>
+            </div>
+            <div id="business-cards-container" class="business-cards-container">
+            </div>
         </section>
     </main>
-    <footer class="footer">
-        <p>©<span id="currentyear"> </span>  🌵 Francisco Javier Zuñiga Sancen 🌵 Queretaro <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg" alt="Mexico Flag" class="mexico-flag"> </p>
-        <p>Last modification: <span id="date-and-time"></span></p>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Tequisquiapan Chamber of Commerce</h3>
+                <p>10 Rue De La Paix</p>
+                <p>Tequisquiapan, Querétaro, México</p>
+                <p>info@tequisquiapanchamber.org</p>
+                <p>(442) 555-2300</p>
+            </div>
+            <div class="social-media">
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube-square"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter-square"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="project-info">
+                <p>WDD231 Class Project</p>
+                <p>🌵 Francisco Javier Zuñiga Sancen🌵 </p>
+                <p>© <span id="current-year-footer"></span> Tequisquiapan Chamber of Commerce</p>
+                <p>Last Modification: <span id="last-modified-date-footer"></span></p>
+            </div>
+        </div>
     </footer>
-    <script src="/wdd231/chamber/scripts/script.js"></script>
+    <script src="/wdd231/chamber/scripts/script.js" defer></script>
 </body>
 </html>

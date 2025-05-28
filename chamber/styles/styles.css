@@ -17,136 +17,242 @@ body.dark-mode {
 }
 
 header {
-    background-color: #3e7246;
-    color: white;
+    background-color: #e0e0e0; /* Light gray background */
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative; /* Needed for absolute positioning of hero image */
 }
 
-.header-content {
+.site-header-content {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* To push nav to the right */
+    width: 100%;
+    max-width: 1200px; /* Limit header width */
     margin-bottom: 20px;
 }
 
-.profile-img {
+.header-logo {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     margin-right: 20px;
 }
 
-.header-text h1 {
+.site-title-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Allow title to take available space */
+}
+
+.site-title-container h1 {
     font-size: 2rem;
     font-weight: 300;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.site-title-container h1 .tequisquiapan-text {
+    color: #3e7246; /* Dark green */
+}
+
+.site-title-container h1 .chamber-text {
+    color: #6a9c72; /* Lighter green */
 }
 
 nav ul {
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
 }
 
 nav ul li {
-    list-style: none;
+    margin-left: 20px; /* Spacing between nav items */
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white;
-    background-color: black;
-    padding: 10px 20px;
+    color: #555; /* Dark gray for links */
+    background-color: transparent;
+    padding: 10px 15px;
     border-radius: 5px;
     transition: all 0.3s ease;
+    font-weight: bold;
 }
 
-nav ul li a:hover {
-    background-color: rgb(247, 169, 97);
-    color: black;
+nav ul li a:hover,
+nav ul li a.active {
+    color: #3e7246; /* Dark green on hover/active */
+    background-color: transparent;
 }
+
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #555; /* Dark gray icon */
+    transition: color 0.3s ease;
+    padding: 0; /* Remove default button padding */
+    margin-left: 10px; /* Space from last nav item */
+}
+
+.theme-toggle-btn:hover {
+    color: #3e7246; /* Dark green on hover */
+}
+
+/* Hero Image Section */
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Fixed height for the hero section */
+    overflow: hidden;
+    margin-top: 20px; /* Space below header content */
+    border-radius: 8px; /* Optional: rounded corners for the hero container */
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the container */
+    filter: brightness(0.7); /* Darken image slightly for text readability */
+    border-radius: 8px;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f0f0f0; /* Light gray text */
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    width: 80%; /* Limit text width */
+}
+
+.keynote-tickets-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    color: #f0f0f0; /* Light gray text */
+    border: 2px solid #555; /* Dark gray border */
+    padding: 10px 20px;
+    border-radius: 20px; /* Rounded button */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.keynote-tickets-btn:hover {
+    background-color: #555; /* Dark gray background on hover */
+    color: white;
+}
+
 
 /* Main area */
 main {
     padding: 20px;
 }
 
-.content-container {
-    display: flex;
-    justify-content: space-around;
+.main-content-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr; /* Adjust column widths as needed */
     gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 20px; /* Added spacing */
+    margin-bottom: 20px;
 }
 
-.card {
-    background-color: #3e7246;
-    color: white;
-    padding: 20px;
+.info-card {
+    background-color: #f9f9f9; /* Light gray for content area */
     border-radius: 8px;
-    width: 40%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    overflow: hidden; /* Ensures header corners are respected */
 }
 
-.card h2 {
-    font-size: 1.5rem;
+body.dark-mode .info-card {
+    background-color: #444;
+    color: #f4f4f4;
+}
+
+.card-header {
+    background-color: #555; /* Dark gray for header */
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.card-content {
+    padding: 20px;
+    line-height: 1.5;
+}
+
+.weather-current {
+    text-align: center;
+}
+
+.weather-current .weather-icon-temp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     margin-bottom: 10px;
 }
 
-.card ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.card ul li {
-    padding: 8px 0;
-}
-
-.card:hover {
-    background-color: rgb(247, 169, 97);
-    color: black;
-}
-
-.card .image-card {
-    width: 100%;
+.weather-current .weather-icon-temp img {
+    width: 60px; /* Adjust size of weather icon */
     height: auto;
-    margin-top: 15px;
-    border-radius: 8px;
+    margin-right: 5px;
 }
 
-/* New styles for business cards section */
-.business-cards-section {
+.weather-current .weather-icon-temp p {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.weather-forecast p {
+    margin-bottom: 8px;
+}
+
+/* Styles for directory listing section */
+.directory-listing {
     padding: 20px;
     background-color: #f4f4f4; /* Light mode default */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-body.dark-mode .business-cards-section {
+body.dark-mode .directory-listing {
     background-color: #2C3E50;
 }
 
-.controls-container {
+.view-controls {
     display: flex;
-    justify-content: flex-end; /* Align buttons to the right */
+    justify-content: flex-end;
     gap: 10px;
     margin-bottom: 20px;
-    padding-bottom: 10px; /* Space below buttons */
-    border-bottom: 1px solid #eee; /* Separator for buttons */
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
 }
 
-body.dark-mode .controls-container {
+body.dark-mode .view-controls {
     border-bottom-color: #555;
 }
 
-.mode-toggle-btn,
+/* Only view toggle buttons */
 .view-toggle-btn {
     background-color: #007bff;
     color: white;
-    padding: 10px 15px; /* Slightly smaller padding for view buttons */
+    padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -154,13 +260,12 @@ body.dark-mode .controls-container {
     transition: background-color 0.3s ease;
 }
 
-.mode-toggle-btn:hover,
 .view-toggle-btn:hover {
     background-color: #0056b3;
 }
 
 .view-toggle-btn.active {
-    background-color: #28a745; /* Highlight active view button */
+    background-color: #28a745;
 }
 
 .view-toggle-btn.active:hover {
@@ -168,14 +273,14 @@ body.dark-mode .controls-container {
 }
 
 /* Grid View Styles */
-.business-card-grid {
+.business-cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     justify-content: center;
 }
 
-.business-card {
+.business-item {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -185,213 +290,294 @@ body.dark-mode .controls-container {
     transition: all 0.3s ease;
 }
 
-body.dark-mode .business-card {
+body.dark-mode .business-item {
     background-color: #444;
     border-color: #555;
     color: #f4f4f4;
 }
 
-.business-card:hover {
+.business-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-.business-card img {
+.business-item img {
     max-width: 120px;
     height: auto;
     margin-bottom: 15px;
     border-radius: 5px;
 }
 
-.business-card h3 {
+.business-item h3 {
     font-size: 1.4rem;
     margin-bottom: 10px;
-    color: #3e7246; /* A distinct color for company names */
+    color: #3e7246;
 }
 
-body.dark-mode .business-card h3 {
+body.dark-mode .business-item h3 {
     color: rgb(247, 169, 97);
 }
 
-.business-card p {
+.business-item p {
     font-size: 0.9rem;
     margin-bottom: 5px;
 }
 
-.business-card a {
+.business-item a {
     color: #007bff;
     text-decoration: none;
     font-weight: bold;
-    display: block; /* Make the link take full width */
+    display: block;
     margin-top: 10px;
 }
 
-body.dark-mode .business-card a {
+body.dark-mode .business-item a {
     color: #8bbde8;
 }
 
-.business-card a:hover {
+.business-item a:hover {
     text-decoration: underline;
 }
 
 /* List View Styles */
-.business-card-grid.list-view-active {
-    display: block; /* Stack items vertically */
-    gap: 0; /* No gap between list items */
+.business-cards-container.list-view-active {
+    display: block;
+    gap: 0;
 }
 
-.business-card-grid.list-view-active .business-card {
-    display: grid; /* Use grid for internal card layout */
-    grid-template-columns: 1fr 1.5fr 1fr 1.5fr; /* Name, Address, Phone, Website */
+.business-cards-container.list-view-active .business-item {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1.5fr;
     gap: 10px;
-    border: 1px solid #ddd; /* Add border for list items */
-    border-radius: 0; /* Remove rounded corners */
-    box-shadow: none; /* Remove shadow */
+    border: 1px solid #ddd;
+    border-radius: 0;
+    box-shadow: none;
     padding: 15px 20px;
-    margin-bottom: -1px; /* Overlap borders to create a continuous list */
-    align-items: center; /* Vertically align content in grid cells */
-    text-align: left; /* Align text to the left */
-    background-color: white; /* Default background for list item */
+    margin-bottom: -1px;
+    align-items: center;
+    text-align: left;
+    background-color: white;
 }
 
-body.dark-mode .business-card-grid.list-view-active .business-card {
+body.dark-mode .business-cards-container.list-view-active .business-item {
     background-color: #444;
     border-color: #555;
     color: #f4f4f4;
 }
 
-
 /* Zebra striping for list view */
-.business-card-grid.list-view-active .business-card:nth-child(even) {
-    background-color: #f9f9f9; /* Lighter background for even rows */
+.business-cards-container.list-view-active .business-item:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
-body.dark-mode .business-card-grid.list-view-active .business-card:nth-child(even) {
-    background-color: #3a3a3a; /* Darker background for even rows in dark mode */
+body.dark-mode .business-cards-container.list-view-active .business-item:nth-child(even) {
+    background-color: #3a3a3a;
 }
 
-
-.business-card-grid.list-view-active .business-card img {
-    display: none; /* Hide logo in list view */
+.business-cards-container.list-view-active .business-item img {
+    display: none;
 }
 
-.business-card-grid.list-view-active .business-card h3 {
-    font-size: 1.1rem; /* Smaller font for list view */
+.business-cards-container.list-view-active .business-item h3 {
+    font-size: 1.1rem;
     margin-bottom: 0;
-    color: #333; /* Darker text for list company names in light mode */
+    color: #333;
 }
 
-body.dark-mode .business-card-grid.list-view-active .business-card h3 {
-    color: rgb(247, 169, 97); /* Highlight in dark mode */
+body.dark-mode .business-cards-container.list-view-active .business-item h3 {
+    color: rgb(247, 169, 97);
 }
 
-.business-card-grid.list-view-active .business-card p {
-    font-size: 0.85rem; /* Smaller font for address/phone */
+.business-cards-container.list-view-active .business-item p {
+    font-size: 0.85rem;
     margin-bottom: 0;
 }
 
-.business-card-grid.list-view-active .business-card a {
+.business-cards-container.list-view-active .business-item a {
     font-size: 0.85rem;
     margin-top: 0;
-    display: inline; /* Keep link inline in list view */
+    display: inline;
 }
 
 
 /* Footer area */
-.footer {
-    background-color: #2C3E50;
-    color: white;
+.site-footer {
+    background-color: #777; /* Light gray from design */
+    color: white; /* Ensure text visibility */
     padding: 20px;
-    text-align: center;
     font-size: 1rem;
-    border-radius: 8px;
-    margin-top: 20px; /* Added spacing */
+    margin-top: 20px; /* Spacing from main content */
+    border-radius: 8px; /* Added for consistency if other elements are rounded */
 }
 
-.footer p {
+body.dark-mode .site-footer {
+    background-color: #444; /* Darker grey for dark mode */
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr; /* Adjust column sizes as per design */
+    gap: 20px;
+    align-items: center;
+    max-width: 1200px; /* Match header max-width for overall page consistency */
+    margin: 0 auto; /* Center the content */
+    text-align: left;
+}
+
+.footer-content h3 {
+    font-size: 1.2rem;
     margin-bottom: 10px;
+    color: white;
 }
 
-.mexico-flag {
-    width: 24px;
-    height: auto;
-    vertical-align: middle;
-    margin-left: 10px;
+.footer-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 5px;
+    color: white;
 }
 
-#date-and-time {
-    font-size: 1rem;
-    color: rgb(247, 169, 97);
+.social-media {
+    display: flex;
+    justify-content: center; /* Center icons in their column */
+    gap: 15px;
+}
+
+.social-media a {
+    color: #555; /* Dark gray for icons in light mode */
+    font-size: 2.5rem;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode .social-media a {
+    color: #bbb; /* Lighter gray for icons in dark mode */
+}
+
+.social-media a:hover {
+    color: #3e7246; /* Green on hover, matching header accents */
+}
+
+.project-info {
+    text-align: right; /* Align text to the right in its column */
+}
+
+.project-info p {
+    margin-bottom: 5px;
+}
+
+/* IDs for current year and last modification date in the footer */
+#current-year-footer,
+#last-modified-date-footer {
+    font-weight: bold;
+    color: #f7a961; /* Orange/peach color for highlights, adaptingtheme accents */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .header-content {
+    .site-header-content {
         flex-direction: column;
         align-items: center;
     }
 
-    .profile-img {
+    .header-logo {
         width: 60px;
         height: 60px;
     }
 
-    .header-text h1 {
+    .site-title-container h1 {
         font-size: 1.5rem;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .site-title-container h1 .tequisquiapan-text,
+    .site-title-container h1 .chamber-text {
+        display: block; /* Stack the two parts of the title */
     }
 
     nav ul {
         flex-direction: column;
+        margin-top: 15px;
     }
 
     nav ul li {
         margin: 5px 0;
     }
 
-/* Main area */
-
-    .content-container {
-        flex-direction: column;
-        align-items: center;
+    .theme-toggle-btn {
+        margin-left: 0;
+        margin-top: 10px; /* Space button from nav links */
     }
 
-    .card {
-        width: 80%;
-        margin-bottom: 20px;
+    .hero-image-container {
+        height: 200px; /* Smaller height for mobile */
+    }
+
+    .hero-text {
+        font-size: 1.5rem;
+    }
+
+    .keynote-tickets-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .main-content-grid {
+        grid-template-columns: 1fr; /* columns on small screens */
+    }
+
+    .info-card {
+        width: 100%; /* Full width for cards on small screens */
     }
 
     /* Grid View - Vertical for small screens */
-    .business-card-grid {
-        grid-template-columns: 1fr; /* Single column for small screens */
+    .business-cards-container {
+        grid-template-columns: 1fr;
     }
 
     /* List View - Stack columns vertically for small screens */
-    .business-card-grid.list-view-active .business-card {
-        grid-template-columns: 1fr; /* Stack all elements */
-        text-align: center; /* Center text for stacked list items */
+    .business-cards-container.list-view-active .business-item {
+        grid-template-columns: 1fr;
+        text-align: center;
         padding: 10px;
     }
-    .business-card-grid.list-view-active .business-card h3,
-    .business-card-grid.list-view-active .business-card p,
-    .business-card-grid.list-view-active .business-card a {
-        text-align: center; /* Ensure text alignment is consistent */
+    .business-cards-container.list-view-active .business-item h3,
+    .business-cards-container.list-view-active .business-item p,
+    .business-cards-container.list-view-active .business-item a {
+        text-align: center;
         margin-bottom: 5px;
     }
-    .business-card-grid.list-view-active .business-card a {
-        display: block; /* Make link block again for better tap area */
+    .business-cards-container.list-view-active .business-item a {
+        display: block;
     }
 
 
-    /* Footer area */
-    .footer p {
-        font-size: 0.9rem;
+    /* Footer area responsive */
+    .footer-content {
+        grid-template-columns: 1fr; /* columns on small screens */
+        text-align: center; /* Center align all content */
+        gap: 30px; /* Increase gap between stacked sections */
     }
 
-    .mexico-flag {
-        width: 20px;
+    .contact-info,
+    .project-info {
+        text-align: center; /* Override specific alignment for mobile */
     }
 
-    #date-and-time {
-        font-size: 0.8rem;
+    .social-media {
+        justify-content: center; /* Keep icons centered */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content h3 {
+        font-size: 1rem;
+    }
+    .footer-content p {
+        font-size: 0.85rem;
+    }
+    .social-media a {
+        font-size: 2rem;
     }
 }

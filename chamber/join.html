@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/wdd231/chamber/styles/normalize.css">
+    <link rel="stylesheet" href="/wdd231/chamber/styles/styles.css">
+    <link rel="stylesheet" href="styles/join.css"> <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Tequisquiapan Chamber of Commerce - Join Us">
+    <meta property="og:description" content="Apply for membership with the Tequisquiapan Chamber of Commerce.">
+    <meta property="og:url" content="https://s4ncen.github.io/wdd231/chamber/join.html">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://s4ncen.github.io/wdd231/images/picture.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Web Computer Programming Certificate Tracker">
+    <title>Tequisquiapan Chamber of Commerce - Join</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="site-header-content">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Escudo-Tequisquiapan.png" alt="Tequisquiapan flag" class="header-logo">
+            <div class="site-title-container">
+                <h1>
+                    <span class="tequisquiapan-text">Tequisquiapan</span>
+                    <span class="chamber-text">Chamber of Commerce</span>
+                </h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html" class="active">Join</a></li>
+                    <li>
+                        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+                            <i class="fas fa-adjust"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        </header>
+
+    <main class="join-main">
+        <h1 class="page-title">Apply for Membership</h1>
+        <div class="join-content">
+            <section class="membership-form-section">
+                <h2>Membership Application Form</h2>
+                <form method="get" action="thankyou.html">
+                    <label for="fname">First Name*</label>
+                    <input type="text" id="fname" name="fname" required>
+
+                    <label for="lname">Last Name*</label>
+                    <input type="text" id="lname" name="lname" required>
+
+                    <label for="title">Title*</label>
+                    <input type="text" id="title" name="title" pattern="[A-Za-z\s-]{7,}" title="Minimum 7 alpha characters, hyphens, or spaces." required>
+
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" placeholder="john89@gmail.com" required>
+
+                    <label for="phone">Cell Phone*</label>
+                    <input type="tel" id="phone" name="phone" placeholder="987-555-1234" required>
+
+                    <label for="organization">Organization Name*</label>
+                    <input type="text" id="organization" name="organization" required>
+
+                    <label for="busposition">Business Position/Role</label>
+                    <input type="text" id="busposition" name="busposition" list="positions">
+                    <datalist id="positions">
+                        <option value="CEO">
+                        <option value="Manager">
+                        <option value="Owner">
+                        <option value="Director">
+                        <option value="Sales Representative">
+                        <option value="Other">
+                    </datalist>
+
+                    <label for="bizdescription">Business Description</label>
+                    <textarea id="bizdescription" name="bizdescription" rows="5"></textarea>
+
+                    <fieldset class="membership-level-radio">
+                        <legend>Choose Membership Level*</legend>
+                        <label><input type="radio" name="membership" value="nonprofit" required> Non-Profit Membership</label>
+                        <label><input type="radio" name="membership" value="bronze"> Bronze Membership</label>
+                        <label><input type="radio" name="membership" value="silver"> Silver Membership</label>
+                        <label><input type="radio" name="membership" value="gold"> Gold Membership</label>
+                    </fieldset>
+
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <input type="submit" value="Apply for Membership" class="submit-btn">
+                </form>
+            </section>
+
+            <section class="membership-levels-section">
+                <h2>Membership Levels</h2>
+                <div class="level-card">
+                    <h3>Non Profit Membership Level</h3>
+                    <p>For non-profit organizations. Access to basic resources and networking events.</p>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+                <div class="level-card">
+                    <h3>Bronze Membership Level</h3>
+                    <p>Basic level for small businesses. Includes directory listing and event discounts.</p>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+                <div class="level-card">
+                    <h3>Silver Membership Level</h3>
+                    <p>Enhanced benefits, priority event access, and marketing opportunities.</p>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+                <div class="level-card">
+                    <h3>Gold Membership Level</h3>
+                    <p>Premium benefits, exclusive workshops, and prominent directory features.</p>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Tequisquiapan Chamber of Commerce</h3>
+                <p>10 Rue De La Paix</p>
+                <p>Tequisquiapan, Querétaro, México</p>
+                <p>info@tequisquiapanchamber.org</p>
+                <p>(442) 555-2300</p>
+            </div>
+            <div class="social-media">
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube-square"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter-square"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="project-info">
+                <p>WDD231 Class Project</p>
+                <p>🌵 Francisco Javier Zuñiga Sancen 🌵</p>
+                <p>© <span id="current-year-footer"></span> Tequisquiapan Chamber of Commerce</p>
+                <p>Last Modification: <span id="last-modified-date-footer"></span></p>
+            </div>
+        </div>
+    </footer>
+    <script src="wdd231/chamber/scripts/join.js" defer></script>
+    <script src="scripts/join.js" defer></script> </body>
+</html>

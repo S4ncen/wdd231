@@ -1,0 +1,263 @@
+/* Specific styles for the Join page */
+
+.join-main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-title {
+    text-align: center;
+    color: #3e7246;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+body.dark-mode .page-title {
+    color: rgb(247, 169, 97);
+}
+
+.join-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for desktop */
+    gap: 40px;
+}
+
+/* Membership Application Form Section */
+.membership-form-section {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .membership-form-section {
+    background-color: #444;
+    color: #f4f4f4;
+}
+
+.membership-form-section h2 {
+    text-align: center;
+    color: #3e7246;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+body.dark-mode .membership-form-section h2 {
+    color: rgb(247, 169, 97);
+}
+
+.membership-form-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.membership-form-section label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+body.dark-mode .membership-form-section label {
+    color: #f4f4f4;
+}
+
+.membership-form-section input[type="text"],
+.membership-form-section input[type="email"],
+.membership-form-section input[type="tel"],
+.membership-form-section textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: white;
+    color: #333;
+}
+
+body.dark-mode .membership-form-section input[type="text"],
+body.dark-mode .membership-form-section input[type="email"],
+body.dark-mode .membership-form-section input[type="tel"],
+body.dark-mode .membership-form-section textarea {
+    background-color: #555;
+    border-color: #666;
+    color: #f4f4f4;
+}
+
+.membership-form-section textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.membership-level-radio {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+}
+
+body.dark-mode .membership-level-radio {
+    background-color: #3a3a3a;
+    border-color: #555;
+}
+
+.membership-level-radio legend {
+    font-weight: bold;
+    color: #3e7246;
+    margin-bottom: 10px;
+    padding: 0 5px;
+}
+
+body.dark-mode .membership-level-radio legend {
+    color: rgb(247, 169, 97);
+}
+
+.membership-level-radio label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: normal;
+    color: #333;
+}
+
+body.dark-mode .membership-level-radio label {
+    color: #f4f4f4;
+}
+
+.membership-level-radio input[type="radio"] {
+    margin-right: 10px;
+}
+
+.submit-btn {
+    background-color: #3e7246;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: rgb(247, 169, 97);
+    color: black;
+}
+
+/* Membership Levels Section */
+.membership-levels-section {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .membership-levels-section {
+    background-color: #444;
+    color: #f4f4f4;
+}
+
+.membership-levels-section h2 {
+    text-align: center;
+    color: #3e7246;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+body.dark-mode .membership-levels-section h2 {
+    color: rgb(247, 169, 97);
+}
+
+.level-card {
+    background-color: #e0e0e0; /* Light gray for cards */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode .level-card {
+    background-color: #555;
+}
+
+.level-card:hover {
+    background-color: #d0d0d0;
+}
+
+body.dark-mode .level-card:hover {
+    background-color: #666;
+}
+
+.level-card h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+body.dark-mode .level-card h3 {
+    color: #f4f4f4;
+}
+
+.level-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+body.dark-mode .level-card p {
+    color: #ccc;
+}
+
+.learn-more-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .join-content {
+        grid-template-columns: 1fr; /* Single column for mobile */
+    }
+
+    .membership-form-section,
+    .membership-levels-section {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .membership-form-section h2,
+    .membership-levels-section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .membership-form-section input[type="text"],
+    .membership-form-section input[type="email"],
+    .membership-form-section input[type="tel"],
+    .membership-form-section textarea {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+    .submit-btn {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}
