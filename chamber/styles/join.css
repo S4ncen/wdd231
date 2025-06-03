@@ -151,6 +151,11 @@ body.dark-mode .membership-level-radio label {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Animation styles */
+    opacity: 0; /* Start invisible */
+    transform: translateY(50px); /* Start 50px below its final position */
+    animation: slideInFromBottom 1s ease-out forwards; /* Apply the animation */
+    animation-delay: 0.3s; /* Delay the animation slightly to let other content load */
 }
 
 body.dark-mode .membership-levels-section {
@@ -225,6 +230,19 @@ body.dark-mode .level-card p {
 .learn-more-btn:hover {
     background-color: #0056b3;
 }
+
+/* Keyframes for the animation */
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* Responsive Design for Small Screens */
 @media (max-width: 768px) {
