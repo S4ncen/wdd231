@@ -1,0 +1,214 @@
+/* --- STYLES FOR THE DISCOVER PAGE --- */
+
+/* Main layout with sidebar */
+.discover-grid {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr; /* Main column wider */
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px; /* Add some padding on larger screens */
+}
+
+.tourist-gallery h2 {
+    font-size: 2.2rem;
+    color: #3e7246;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Container for place cards */
+.places-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns by default */
+    gap: 20px;
+}
+
+/* Individual place card style */
+.place-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.place-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.place-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* Ensures the image covers the space without distortion */
+}
+
+.place-card-content {
+    padding: 20px;
+    flex-grow: 1; /* Allows content to grow and push text down */
+}
+
+.place-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.place-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Sidebar styles */
+.sidebar-info {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-info h3 {
+    font-size: 1.6rem;
+    color: #3e7246;
+    margin-top: 0;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.sidebar-card {
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+}
+
+.sidebar-card h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.sidebar-card p,
+.sidebar-card ul {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+.sidebar-card li {
+    margin-bottom: 8px;
+}
+
+/* --- DARK MODE STYLES FOR DISCOVER --- */
+body.dark-mode .tourist-gallery h2 {
+    color: #82b88a;
+    border-bottom-color: #444;
+}
+
+body.dark-mode .place-card {
+    background-color: #2A2A2A;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .place-card h3 {
+    color: #F7A961;
+}
+
+body.dark-mode .place-card p {
+    color: #C0C0C0;
+}
+
+body.dark-mode .sidebar-info {
+    background-color: #252525;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .sidebar-info h3 {
+    color: #82b88a;
+    border-bottom-color: #444;
+}
+
+body.dark-mode .sidebar-card {
+    background-color: #2E2E2E;
+    border-color: #444;
+}
+
+body.dark-mode .sidebar-card h4 {
+    color: #E0E0E0;
+}
+
+/* --- RESPONSIVE STYLES --- */
+
+/* For screens smaller than 992px (e.g., tablets in landscape, smaller laptops) */
+@media (max-width: 992px) {
+    .discover-grid {
+        grid-template-columns: 1fr; /* Stacks columns */
+        padding: 15px; /* Adjust padding for medium screens */
+    }
+    .tourist-gallery {
+        margin-bottom: 20px;
+    }
+}
+
+/* For screens smaller than 768px (e.g., tablets in portrait, larger phones) */
+@media (max-width: 768px) {
+    .places-grid-container {
+        grid-template-columns: 1fr; /* Single column for cards */
+    }
+    .tourist-gallery h2 {
+        font-size: 1.8rem;
+    }
+    .place-card img {
+        height: 200px; /* Slightly reduce image height on smaller screens */
+    }
+}
+
+/* For screens smaller than 576px (e.g., most mobile phones) */
+@media (max-width: 576px) {
+    .discover-grid {
+        padding: 10px; /* Further reduce padding for small screens */
+    }
+    .tourist-gallery h2 {
+        font-size: 1.6rem;
+        text-align: center; /* Center main heading */
+    }
+    .place-card-content {
+        padding: 15px; /* Adjust card content padding */
+    }
+    .place-card h3 {
+        font-size: 1.3rem; /* Smaller heading for cards */
+    }
+    .place-card p {
+        font-size: 0.9rem; /* Smaller text for card descriptions */
+    }
+    .sidebar-info {
+        padding: 15px; /* Adjust sidebar padding */
+    }
+    .sidebar-info h3 {
+        font-size: 1.4rem;
+        text-align: center; /* Center sidebar heading */
+    }
+    .sidebar-card h4 {
+        font-size: 1.1rem;
+    }
+    .sidebar-card p,
+    .sidebar-card ul {
+        font-size: 0.9rem;
+    }
+}
+
+/* Optional: For very large screens, ensure content doesn't stretch too much */
+@media (min-width: 1400px) {
+    .discover-grid {
+        max-width: 1400px; /* Allow wider layout on very large screens */
+        padding: 30px;
+    }
+}

@@ -13,17 +13,109 @@
     font-size: 2.5rem;
 }
 
+/* --- DARK MODE STYLES for join.html --- */
 body.dark-mode .page-title {
-    color: rgb(247, 169, 97);
+    color: #F7A961;
 }
+
+body.dark-mode .membership-form-section {
+    background-color: #2A2A2A;
+    color: #E0E0E0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .membership-form-section h2 {
+    color: #F7A961;
+}
+
+body.dark-mode .membership-form-section label {
+    color: #D0D0D0;
+}
+
+body.dark-mode .membership-form-section input[type="text"],
+body.dark-mode .membership-form-section input[type="email"],
+body.dark-mode .membership-form-section input[type="tel"],
+body.dark-mode .membership-form-section textarea {
+    background-color: #383838;
+    border-color: #555555;
+    color: #E0E0E0;
+}
+
+body.dark-mode .membership-form-section input[type="text"]::placeholder,
+body.dark-mode .membership-form-section input[type="email"]::placeholder,
+body.dark-mode .membership-form-section input[type="tel"]::placeholder,
+body.dark-mode .membership-form-section textarea::placeholder {
+    color: #888;
+}
+
+body.dark-mode .membership-level-radio {
+    background-color: #303030;
+    border-color: #4A4A4A;
+}
+
+body.dark-mode .membership-level-radio legend {
+    color: #F7A961;
+}
+
+body.dark-mode .membership-level-radio label { /* Added missing selector part */
+    color: #D0D0D0;
+}
+
+
+body.dark-mode .submit-btn {
+    background-color: #0059B3;
+    color: #E0E0E0;
+}
+
+body.dark-mode .submit-btn:hover {
+    background-color: #F7A961;
+    color: #1A1A1A;
+}
+
+body.dark-mode .membership-levels-section {
+    background-color: #2A2A2A;
+    color: #E0E0E0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .membership-levels-section h2 {
+    color: #F7A961;
+}
+
+body.dark-mode .level-card {
+    background-color: #333333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode .level-card:hover {
+    background-color: #3D3D3D;
+}
+
+body.dark-mode .level-card h3 {
+    color: #E8E8E8;
+}
+
+body.dark-mode .level-card p {
+    color: #B0B0B0;
+}
+
+body.dark-mode .learn-more-btn {
+    background-color: #0066CC;
+    color: #E0E0E0;
+}
+
+body.dark-mode .learn-more-btn:hover {
+    background-color: #0052A3;
+}
+/* --- END OF DARK MODE STYLES for join.html --- */
+
 
 .join-content {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns for desktop */
+    grid-template-columns: 1fr 1fr; 
     gap: 40px;
 }
 
-/* Membership Application Form Section */
 .membership-form-section {
     background-color: #f9f9f9;
     padding: 30px;
@@ -31,20 +123,11 @@ body.dark-mode .page-title {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-body.dark-mode .membership-form-section {
-    background-color: #444;
-    color: #f4f4f4;
-}
-
 .membership-form-section h2 {
     text-align: center;
     color: #3e7246;
     margin-bottom: 25px;
     font-size: 1.8rem;
-}
-
-body.dark-mode .membership-form-section h2 {
-    color: rgb(247, 169, 97);
 }
 
 .membership-form-section form {
@@ -56,10 +139,6 @@ body.dark-mode .membership-form-section h2 {
     margin-bottom: 8px;
     font-weight: bold;
     color: #555;
-}
-
-body.dark-mode .membership-form-section label {
-    color: #f4f4f4;
 }
 
 .membership-form-section input[type="text"],
@@ -75,15 +154,6 @@ body.dark-mode .membership-form-section label {
     color: #333;
 }
 
-body.dark-mode .membership-form-section input[type="text"],
-body.dark-mode .membership-form-section input[type="email"],
-body.dark-mode .membership-form-section input[type="tel"],
-body.dark-mode .membership-form-section textarea {
-    background-color: #555;
-    border-color: #666;
-    color: #f4f4f4;
-}
-
 .membership-form-section textarea {
     resize: vertical;
     min-height: 80px;
@@ -97,11 +167,6 @@ body.dark-mode .membership-form-section textarea {
     background-color: #f0f0f0;
 }
 
-body.dark-mode .membership-level-radio {
-    background-color: #3a3a3a;
-    border-color: #555;
-}
-
 .membership-level-radio legend {
     font-weight: bold;
     color: #3e7246;
@@ -109,19 +174,11 @@ body.dark-mode .membership-level-radio {
     padding: 0 5px;
 }
 
-body.dark-mode .membership-level-radio legend {
-    color: rgb(247, 169, 97);
-}
-
 .membership-level-radio label {
     display: block;
     margin-bottom: 8px;
     font-weight: normal;
     color: #333;
-}
-
-body.dark-mode .membership-level-radio label {
-    color: #f4f4f4;
 }
 
 .membership-level-radio input[type="radio"] {
@@ -145,22 +202,15 @@ body.dark-mode .membership-level-radio label {
     color: black;
 }
 
-/* Membership Levels Section */
 .membership-levels-section {
     background-color: #f9f9f9;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Animation styles */
-    opacity: 0; /* Start invisible */
-    transform: translateY(50px); /* Start 50px below its final position */
-    animation: slideInFromBottom 1s ease-out forwards; /* Apply the animation */
-    animation-delay: 0.3s; /* Delay the animation slightly to let other content load */
-}
-
-body.dark-mode .membership-levels-section {
-    background-color: #444;
-    color: #f4f4f4;
+    opacity: 0; 
+    transform: translateY(50px); 
+    animation: slideInFromBottom 1s ease-out forwards; 
+    animation-delay: 0.3s; 
 }
 
 .membership-levels-section h2 {
@@ -170,12 +220,8 @@ body.dark-mode .membership-levels-section {
     font-size: 1.8rem;
 }
 
-body.dark-mode .membership-levels-section h2 {
-    color: rgb(247, 169, 97);
-}
-
 .level-card {
-    background-color: #e0e0e0; /* Light gray for cards */
+    background-color: #e0e0e0; 
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -184,16 +230,8 @@ body.dark-mode .membership-levels-section h2 {
     transition: background-color 0.3s ease;
 }
 
-body.dark-mode .level-card {
-    background-color: #555;
-}
-
 .level-card:hover {
     background-color: #d0d0d0;
-}
-
-body.dark-mode .level-card:hover {
-    background-color: #666;
 }
 
 .level-card h3 {
@@ -202,18 +240,10 @@ body.dark-mode .level-card:hover {
     margin-bottom: 10px;
 }
 
-body.dark-mode .level-card h3 {
-    color: #f4f4f4;
-}
-
 .level-card p {
     font-size: 0.95rem;
     color: #666;
     margin-bottom: 15px;
-}
-
-body.dark-mode .level-card p {
-    color: #ccc;
 }
 
 .learn-more-btn {
@@ -231,7 +261,6 @@ body.dark-mode .level-card p {
     background-color: #0056b3;
 }
 
-/* Keyframes for the animation */
 @keyframes slideInFromBottom {
     from {
         opacity: 0;
@@ -243,16 +272,14 @@ body.dark-mode .level-card p {
     }
 }
 
-
-/* Responsive Design for Small Screens */
 @media (max-width: 768px) {
     .join-content {
-        grid-template-columns: 1fr; /* Single column for mobile */
+        grid-template-columns: 1fr; 
     }
 
     .membership-form-section,
     .membership-levels-section {
-        padding: 20px; /* Adjust padding for smaller screens */
+        padding: 20px; 
     }
 
     .page-title {

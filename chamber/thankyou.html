@@ -1,23 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Submitted - Tequisquiapan Chamber of Commerce</title>
     <link rel="stylesheet" href="/wdd231/chamber/styles/normalize.css">
-    <link rel="stylesheet" href="/wdd231/chamber/styles/styles.css">
+    <link rel="stylesheet" href="/wdd231/chamber/styles/styles.css"> {/* Estilos generales */}
+    <link rel="stylesheet" href="/wdd231/chamber/styles/join.css">   {/* Puedes reusar algunos estilos de join o crear uno nuevo */}
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon.ico">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Tequisquiapan Chamber of Commerce">
-    <meta property="og:description" content="A place to track my first certificate progress.">
-    <meta property="og:url" content="https://s4ncen.github.io/wdd231/">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:image" content="https://s4ncen.github.io/wdd231/images/picture.jpg">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Web Computer Programming Certificate Tracker">
-    <title>Tequisquiapan Chamber of Commerce</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos adicionales para la página de agradecimiento si son necesarios */
+        .thankyou-main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        body.dark-mode .thankyou-main {
+            background-color: #2A2A2A;
+            color: #E0E0E0;
+        }
+        .thankyou-main h1 {
+            color: #3e7246;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        body.dark-mode .thankyou-main h1 {
+            color: #F7A961;
+        }
+        .thankyou-main p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .form-data-summary {
+            border-top: 1px solid #ddd;
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+        body.dark-mode .form-data-summary {
+            border-top-color: #444;
+        }
+        .form-data-summary strong {
+            color: #333;
+        }
+        body.dark-mode .form-data-summary strong {
+            color: #ccc;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -33,7 +68,7 @@
                 <ul>
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="discover.html">Discover</a></li>
-                    <li><a href="#directory-listing-section" class="active">Directory</a></li>
+                    <li><a href="directory.html">Directory</a></li>
                     <li><a href="join.html">Join</a></li>
                     <li>
                         <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
@@ -44,17 +79,19 @@
             </nav>
         </div>
     </header>
-    <main>
 
-        <section class="directory-listing" id="directory-listing-section">
-            <div class="view-controls">
-                <button id="grid-view-btn" class="view-toggle-btn active" aria-label="Show Grid View"><i class="fas fa-th-large"></i></button>
-                <button id="list-view-btn" class="view-toggle-btn" aria-label="Show List View"><i class="fas fa-list"></i></button>
+    <main class="thankyou-main">
+        <h1>Thank You for Your Application!</h1>
+        <p>We have received your membership application. Here's a summary of the information you submitted:</p>
+        
+        <div id="formDataDisplay" class="form-data-summary">
             </div>
-            <div id="business-cards-container" class="business-cards-container">
-            </div>
-        </section>
+
+        <p style="text-align:center; margin-top:30px;">
+            <a href="index.html" class="submit-btn" style="text-decoration:none; display:inline-block;">Return to Homepage</a>
+        </p>
     </main>
+
     <footer class="site-footer">
         <div class="footer-content">
             <div class="contact-info">
@@ -71,12 +108,13 @@
             </div>
             <div class="project-info">
                 <p>WDD231 Class Project</p>
-                <p>🌵 Francisco Javier Zuñiga Sancen🌵 </p>
+                <p>🌵 Francisco Javier Zuñiga Sancen 🌵</p>
                 <p>© <span id="current-year-footer"></span> Tequisquiapan Chamber of Commerce</p>
                 <p>Last Modification: <span id="last-modified-date-footer"></span></p>
             </div>
         </div>
     </footer>
-    <script src="/wdd231/chamber/scripts/script.js" defer></script>
+    <script src="/wdd231/chamber/scripts/script.js" defer></script> {/* Script general para footer y tema */}
+    <script src="/wdd231/chamber/scripts/thankyou.js" defer></script> {/* Script específico para esta página */}
 </body>
 </html>

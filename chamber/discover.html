@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover Tequisquiapan | Chamber of Commerce</title>
+
+    <meta name="description" content="Discover the most important tourist attractions in Tequisquiapan, Querétaro. Explore the downtown, vineyards, opal mines, and more." />
+    <meta property="og:title" content="Discover Tequisquiapan | Chamber of Commerce" />
+    <meta property="og:description" content="Explore the treasures of Tequisquiapan, from its charming historic center to its famous vineyards and opal mines." />
+    <meta property="og:url" content="https://francisco-sancen.github.io/wdd231/chamber/discover.html" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Plaza_principal_de_Tequisquiapan_M%C3%A9xico.JPG/1280px-Plaza_principal_de_Tequisquiapan_M%C3%A9xico.JPG" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tequisquiapan Chamber of Commerce" />
+
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="/wdd231/chamber/styles/normalize.css" />
+    <link rel="stylesheet" href="/wdd231/chamber/styles/styles.css" />
+    <link rel="stylesheet" href="/wdd231/chamber/styles/discover.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="site-header-content">
+            <img src="/wdd231/images/logo.jpg" alt="Tequisquiapan Chamber Logo" class="header-logo" />
+            <div class="site-title-container">
+                <h1>
+                    <span class="tequisquiapan-text">Tequisquiapan</span>
+                    <span class="chamber-text">Chamber of Commerce</span>
+                </h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="discover.html" class="active">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li>
+                        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+                            <span id="theme-icon-animated">🌙</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="discover-grid">
+            <section class="tourist-gallery">
+                <h2>Tequisquiapan's Treasures</h2>
+                <div id="places-container" class="places-grid-container">
+                    </div>
+            </section>
+            <aside class="sidebar-info">
+                <h3>Visitor Information</h3>
+                <div class="sidebar-card">
+                    <h4>Your Visit Status</h4>
+                    <p id="visit-message">Loading welcome message...</p>
+                </div>
+                <div class="sidebar-card">
+                    <h4>Quick Facts</h4>
+                    <ul>
+                        <li><strong>Population:</strong> ~72,000</li>
+                        <li><strong>Founded:</strong> 1551</li>
+                        <li><strong>Status:</strong> Magical Town since 2012</li>
+                        <li><strong>Main Attraction:</strong> Art, Cheese, and Wine Route</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Tequisquiapan Chamber of Commerce</h3>
+                <p>10 Rue De La Paix</p>
+                <p>Tequisquiapan, Querétaro, México</p>
+                <p>info@tequisquiapanchamber.org</p>
+                <p>(442) 555-2300</p>
+            </div>
+            <div class="social-media">
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube-square"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter-square"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="project-info">
+                <p>WDD231 Class Project</p>
+                <p>🌵 Francisco Javier Zuñiga Sancen🌵</p>
+                <p>© <span id="current-year-footer"></span> Tequisquiapan Chamber of Commerce</p>
+                <p>Last Modification: <span id="last-modified-date-footer"></span></p>
+            </div>
+        </div>
+    </footer>
+    <script src="/wdd231/chamber/scripts/script.js" defer></script>
+    <script src="/wdd231/chamber/scripts/discover.js" defer></script>
+</body>
+</html>

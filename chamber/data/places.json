@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Historic Center & Miguel Hidalgo Plaza",
+    "description": "The heart of Tequisquiapan. A lively place with its central kiosk, colonial arches, and a peaceful atmosphere. Perfect for walking and enjoying local cuisine.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Plaza_Miguel_Hidalgo._Tequisquiapan%2C_Quer%C3%A9taro..jpg",
+    "alt": "Miguel Hidalgo Plaza in the center of Tequisquiapan with its kiosk and arches"
+  },
+  {
+    "name": "Santa María de la Asunción Parish",
+    "description": "A beautiful neoclassical church with a distinctive pink dome visible from almost anywhere in town. Its pink quarry stone facade is stunning.",
+    "image": "http://upload.wikimedia.org/wikipedia/commons/a/a7/Parroquia_Santa_Mar%C3%ADa_de_la_Asunci%C3%B3n_%28Tequisquiapan%29.jpg",
+    "alt": "Facade of the Santa María de la Asunción Parish in Tequisquiapan"
+  },
+  {
+    "name": "La Redonda Vineyards",
+    "description": "Just a few minutes from the center, this vineyard is a pioneer in the region. It offers tours to learn about winemaking, tastings, and cultural events throughout the year.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a2/BarrilEntrada.jpg",
+    "alt": "Fields of vines at La Redonda Vineyards near Tequisquiapan"
+  },
+  {
+    "name": "Tequisquiapan Opal Mines",
+    "description": "A unique adventure where you can explore an open-pit mine, learn about the extraction of opal, a semi-precious stone, and even search for your own gem.",
+    "image": "https://www.de-paseo.com/queretaro/wp-content/uploads/2024/08/minas-de-opalo-tequis-2024-7.jpg",
+    "alt": "View of an open-pit opal mine in Tequisquiapan"
+  },
+  {
+    "name": "Craft Market",
+    "description": "An ideal place to find souvenirs and local art. It specializes in wicker and rod products, such as baskets, furniture, and ornaments, all handmade by local artisans.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/42/Artesan%C3%ADas_en_Tequisquiapan.jpg",
+    "alt": "Stall with wicker baskets and crafts in Tequisquiapan"
+  },
+  {
+    "name": "La Pila Park",
+    "description": "An oasis of tranquility ideal for families. It features green areas, playgrounds, a small lake, and the centuries-old ahuehuete tree that gives it its name, next to the water pile that supplied the town.",
+    "image": "https://www.de-paseo.com/queretaro/wp-content/uploads/2024/08/parque-la-pila-2024-princ.jpg",
+    "alt": "Historic water pile within the lush La Pila Park in Tequisquiapan"
+  }
+]
