@@ -1,0 +1,138 @@
+/* Apply the site plan's own rules to itself */
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    background-color: #EAECEE; /* A neutral grey background for the page itself */
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+header {
+    background-color: #005A9C;
+    color: #FFFFFF;
+    padding: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+section {
+    background-color: #F4F8FB;
+    border: 1px solid #D6DBDF;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    padding: 1.5rem 2rem;
+}
+
+h1, h2, h3 {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: #005A9C;
+}
+
+h2 {
+    border-bottom: 2px solid #D6DBDF;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Color Schema Section */
+.color-schema-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.color-swatch {
+    flex: 1;
+    min-width: 200px;
+}
+
+.color-swatch .swatch {
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid #D6DBDF;
+    margin-bottom: 0.5rem;
+}
+
+/* Typography Section */
+.typography-example {
+    border: 1px solid #D6DBDF;
+    padding: 1rem;
+    border-radius: 5px;
+}
+.typography-example p {
+    color: #333333; /* Explicitly set body text color */
+}
+
+/* Wireframe Section */
+.wireframe-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.wireframe {
+    flex: 1;
+    min-width: 300px;
+    border: 2px solid #333333;
+    padding: 1rem;
+    background-color: #FFFFFF;
+}
+
+.wireframe h3 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.wf-header, .wf-hero, .wf-section, .wf-footer, .wf-box {
+    border: 1px dashed #999;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    background-color: #f8f9f9;
+}
+
+.wireframe .wf-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    border: none;
+    padding: 0;
+}
+
+.wireframe .wf-grid .wf-box {
+    margin: 0;
+}
+
+.wireframe .cta {
+    background-color: #D6EAF8; /* Light blue to indicate a CTA block */
+    border-style: solid;
+}
