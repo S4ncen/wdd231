@@ -4,38 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IntelligentFlow | Business Automation Solutions</title>
-    <link rel="stylesheet" href="/wdd231/project/styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
     <header class="header">
         <div class="container">
-            <div class="logo">IntelligentFlow</div>
+            <a class="logo" href="index.html">IntelligentFlow</a>
+
+            <button class="nav-toggle" aria-label="open navigation">
+                <span class="hamburger"></span>
+            </button>
             <nav class="nav-menu">
                 <a href="services.html">Services</a>
                 <a href="#how-it-works">How It Works</a>
                 <a href="contact.html">Contact</a>
+                <a href="contact.html" class="btn btn-secondary nav-btn">Schedule Consultation</a>
             </nav>
-            <a href="contact.html" class="btn btn-secondary">Schedule Consultation</a>
         </div>
     </header>
 
     <main>
         <section class="hero">
-            <h1>Less manual work. More business growth.</h1>
-            <p>We automate your repetitive tasks and create intelligent assistants so you can focus on what truly matters.</p>
-            <a href="services.html" class="btn btn-primary">Discover How</a>
+            <div class="hero-content">
+                <h1>Less manual work. More business growth.</h1>
+                <p>We automate your repetitive tasks and create intelligent assistants so you can focus on what truly matters.</p>
+                <a href="services.html" class="btn btn-primary">Discover How</a>
+            </div>
         </section>
-
         <section class="social-proof">
             <div class="container">
                 <p>Helping companies like yours to optimize their processes</p>
                 <div class="logos">
-                    <span>Client Logo 1</span>
-                    <span>Client Logo 2</span>
-                    <span>Client Logo 3</span>
-                    <span>Client Logo 4</span>
+                    <img src="https://idahowebsites.com/wp-content/uploads/2023/01/IDWeb.png" alt="Idaho Websites Logo">
+                    <img src="https://res2.yourwebsite.life/res/64f0432be8a018001782f724/651b4a3a29bc310016db6043_optimized_217.webp" alt="Surge Web Design Logo">
+                    <img src="https://graphiczen.com/wp-content/uploads/2020/08/graphiczen-logo-white-600x160-1.svg" alt="Graphic Zen Logo">
+                    <img src="https://peppershock.com/wp-content/uploads/2023/05/PPSK-Logo-2017-HorizontalWhite-1-1.png" alt="Peppershock Media Logo">
                 </div>
+            </div>
+        </section>
+
+        <section id="automation-projects" class="automation-projects">
+            <div class="container">
+                <h2>Automation in Action: Example Projects</h2>
+                <div id="project-grid" class="project-grid">
+                    </div>
             </div>
         </section>
 
@@ -91,11 +104,19 @@
                 <a href="contact.html" class="btn">Schedule a Free Consultation</a>
             </div>
         </section>
+
+        <div id="project-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div id="modal-body">
+                    </div>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
         <div class="container">
-            <div class="logo"><a href="/wdd231/project/site-plan.html">IntelligentFlow</a></div>
+            <div class="logo"><a href="/wdd231/finalproject/site-plan.html">IntelligentFlow</a></div>
             <div class="footer-nav">
                 <a href="services.html">Services</a>
                 <a href="#how-it-works">How It Works</a>
@@ -106,9 +127,11 @@
             </div>
             <div class="copyright">
                 <p>© 2025 IntelligentFlow | Privacy Policy</p>
+                <p>This site is for educational purposes only</p>
             </div>
         </div>
     </footer>
 
+    <script src="scripts/main.js"></script>
 </body>
 </html>

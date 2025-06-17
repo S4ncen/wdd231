@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services | IntelligentFlow</title>
-    <link rel="stylesheet" href="/wdd231/project/styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
     <header class="header">
         <div class="container">
-            <div class="logo">IntelligentFlow</div>
+            <a class="logo" href="index.html">IntelligentFlow</a>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
             <nav class="nav-menu">
                 <a href="services.html">Services</a>
                 <a href="index.html#how-it-works">How It Works</a>
                 <a href="contact.html">Contact</a>
+                <a href="contact.html" class="btn btn-secondary nav-btn">Schedule Consultation</a>
             </nav>
-            <a href="contact.html" class="btn btn-secondary">Schedule Consultation</a>
         </div>
     </header>
 
@@ -30,7 +33,7 @@
 
         <section class="container">
             <div class="service-detail">
-                <div class="service-image">[Automation Icon or Image]</div>
+                <div class="service-image"><img src="/wdd231/finalproject/images/bpa.jpeg" alt=""></div>
                 <div class="service-content">
                     <h2>Business Process Automation (BPA)</h2>
                     <p>We connect your software tools (Gmail, Slack, Trello, your CRM, etc.) to create automatic workflows. Forget about copying and pasting information, sending follow-up emails manually, or generating reports by hand.</p>
@@ -44,7 +47,7 @@
             </div>
 
             <div class="service-detail">
-                <div class="service-image">[Virtual Assistant Icon or Image]</div>
+                <div class="service-image"><img src="/wdd231/finalproject/images/bot.jpeg" alt=""></div>
                 <div class="service-content">
                     <h2>Intelligent Assistants & Service Bots</h2>
                     <p>We implement virtual assistants on your website or messaging channels (WhatsApp, Messenger) that can attend to your customers 24/7. They qualify leads, answer frequently asked questions, and schedule meetings so your team only speaks with the most important prospects.</p>
@@ -70,7 +73,7 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="logo">IntelligentFlow</div>
+            <div class="logo"><a href="/wdd231/project/site-plan.html">IntelligentFlow</a></div>
             <div class="footer-nav">
                 <a href="services.html">Services</a>
                 <a href="index.html#how-it-works">How It Works</a>
@@ -80,10 +83,12 @@
                 <p>contact@intelligentflow.com | Queretaro, Mexico</p>
             </div>
             <div class="copyright">
-                <p>© 2025 IntelligentFlow | Privacy Policy</p>
+                    <p>&copy; <span id="current-year"></span> IntelligentFlow | Privacy Policy</p>
+                    <p id="visit-counter" class="visit-counter"></p>
+                    <p>This site is for educational purposes only</p>
             </div>
         </div>
     </footer>
-
+    <script src="scripts/main.js"></script>
 </body>
 </html>

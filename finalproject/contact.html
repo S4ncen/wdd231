@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | IntelligentFlow</title>
-    <link rel="stylesheet" href="/wdd231/project/styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
     <header class="header">
         <div class="container">
-            <div class="logo">IntelligentFlow</div>
+            <a class="logo" href="index.html">IntelligentFlow</a>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
             <nav class="nav-menu">
                 <a href="services.html">Services</a>
                 <a href="index.html#how-it-works">How It Works</a>
                 <a href="contact.html">Contact</a>
+                <a href="contact.html" class="btn btn-secondary nav-btn">Schedule Consultation</a>
             </nav>
-            <a href="contact.html" class="btn btn-secondary">Schedule Consultation</a>
         </div>
     </header>
 
@@ -32,7 +35,7 @@
             <div class="contact-main">
                 <div class="contact-form">
                     <h3>Contact Form</h3>
-                    <form>
+                    <form action="thankyou.html" method="GET">
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" required>
@@ -47,7 +50,7 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Tell us a bit about your business and what you would like to improve or automate.</label>
-                            <textarea id="message" name="message" required></textarea>
+                            <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
@@ -69,7 +72,7 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="logo">IntelligentFlow</div>
+            <div class="logo"><a href="/wdd231/project/site-plan.html">IntelligentFlow</a></div>
             <div class="footer-nav">
                 <a href="services.html">Services</a>
                 <a href="index.html#how-it-works">How It Works</a>
@@ -79,10 +82,12 @@
                 <p>contact@intelligentflow.com | Queretaro, Mexico</p>
             </div>
             <div class="copyright">
-                <p>© 2025 IntelligentFlow | Privacy Policy</p>
+                    <p>&copy; <span id="current-year"></span> IntelligentFlow | Privacy Policy</p>
+                    <p id="visit-counter" class="visit-counter"></p>
+                    <p>This site is for educational purposes only</p>
             </div>
         </div>
     </footer>
-
+    <script src="scripts/main.js"></script>
 </body>
 </html>
